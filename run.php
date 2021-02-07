@@ -1,5 +1,5 @@
 <?php
-function curl($url, $ua, $nmr = null){
+function curl($a, $ua, $nmr = null){
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_URL, "https://www.sharedmp.com/api/sms/send?event=register&mobile=".$nmr."&area_code=62" );
 	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
