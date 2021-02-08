@@ -31,7 +31,7 @@ $nmr = trim(fgets(STDIN));
 echo "[+]Brapa?:  ";
 $brp = trim(fgets(STDIN));
 echo "\n";
-for ($i = 0; $i < $brp; $i++){
+for ($a = 0; $a < $brp; $a++){
 $gas = curl($a, $ua, $nmr);
 echo "$gas\n";
 }
