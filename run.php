@@ -12,20 +12,6 @@ curl_setopt($ch, CURLOPT_COOKIEFILE, 'cok.txt');
 	return $result;
 
 }
-
-function getcok($url, $ua = null){
-	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, $url);
-	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-curl_setopt($ch, CURLOPT_COOKIEJAR, 'cok.txt');
-curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	curl_setopt($ch, CURLOPT_POST, 1);
-	curl_setopt($ch, CURLOPT_HTTPHEADER, $ua);
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-	$result = curl_exec($ch);
-	return $result;
-}
 $ua = array(
 "Host: api-peking404.000webhostapp.com",
 "user-agent: Mozilla/5.0 (Linux; Android 6.0.1; SM-J500G Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Mobile Safari/537.36",
