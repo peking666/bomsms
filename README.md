@@ -1,5 +1,5 @@
 
-$pkg install php
+$pkg install php\n
 $pkg install git
 $git clone https://github.com/peking707/bomsms
 $cd bomsms
